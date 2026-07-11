@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Policies &amp; Terms — Lana Society</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pine: #1F4A44; --tide: #4E7E8C; --sage: #9DBAA6;
+      --sand: #E4DBCB; --bone: #F5F2EB; --charcoal: #262A28;
+      --muted: #ECE6D8; --muted-fg: #5C6360;
+      --overlay: #FBFAF5; --border: #DED6C6;
+      --font-serif: 'Fraunces', Georgia, serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; padding: 0; background: var(--bone); color: var(--charcoal); font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.65; }
+    a { color: var(--tide); text-decoration: none; transition: color .15s; }
+    a:hover { color: var(--pine); }
+    ::selection { background: var(--sage); color: var(--pine); }
+
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(245,242,235,.9); backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
+    }
+    nav { max-width: 1040px; margin: 0 auto; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo { display: flex; align-items: center; gap: 12px; color: var(--pine); font-family: var(--font-serif); font-weight: 500; font-size: 21px; }
+    .back-link { display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 500; color: var(--pine); }
+
+    .title-band { background: var(--pine); color: var(--bone); }
+    .title-band-inner { max-width: 1040px; margin: 0 auto; padding: 56px 28px; }
+    .title-band .label { font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--sage); margin-bottom: 14px; }
+    .title-band h1 { font-family: var(--font-serif); font-weight: 400; font-size: 44px; line-height: 1.06; letter-spacing: -.02em; color: var(--bone); margin: 0; }
+
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 56px 28px 88px; }
+    .disclaimer { display: flex; gap: 14px; background: rgba(157,186,166,.16); border: 1px solid var(--sage); border-radius: 14px; padding: 20px 22px; margin-bottom: 40px; }
+    .disclaimer p { margin: 0; font-size: 15px; color: var(--charcoal); line-height: 1.6; }
+    .disclaimer code { font-family: monospace; font-size: 13px; color: var(--tide); }
+
+    .lg-grid { display: grid; grid-template-columns: 200px 1fr; gap: 56px; align-items: start; }
+    .toc { position: sticky; top: 104px; display: flex; flex-direction: column; gap: 10px; }
+    .toc a { font-size: 15px; font-weight: 500; color: var(--pine); }
+    .content { max-width: 680px; }
+
+    .lg-sec { scroll-margin-top: 104px; }
+    .lg-sec h2 { font-family: var(--font-serif); font-weight: 400; font-size: 32px; letter-spacing: -.02em; color: var(--pine); margin: 0 0 6px; }
+    .eff-date { font-size: 14px; color: var(--muted-fg); margin-bottom: 20px; }
+    .lg-h3 { font-family: var(--font-serif); font-weight: 500; font-size: 19px; color: var(--pine); margin: 28px 0 8px; }
+    .lg-p { font-size: 16px; color: var(--charcoal); margin: 0 0 14px; }
+    .lg-ul { margin: 0 0 16px; padding-left: 20px; }
+    .lg-ul li { font-size: 16px; color: var(--charcoal); margin: 0 0 8px; }
+    .lg-contact { font-size: 15px; color: var(--muted-fg); border-top: 1px solid var(--border); margin-top: 22px; padding-top: 16px; }
+    .divider { height: 1px; background: var(--border); margin: 56px 0; }
+    .rec-box { background: var(--muted); border-radius: 10px; padding: 12px 16px; margin: 0 0 12px; font-size: 14px; color: var(--muted-fg); }
+
+    .btn { display: inline-flex; align-items: center; justify-content: center; cursor: pointer; border: none; font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 15px; border-radius: 10px; padding: 0 20px; height: 44px; transition: opacity .15s; white-space: nowrap; }
+    .btn-primary { background: var(--pine); color: var(--bone); }
+    .btn-primary:hover { opacity: .88; }
+
+    footer { background: var(--pine); color: var(--bone); }
+    .footer-inner { max-width: 1040px; margin: 0 auto; padding: 36px 28px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
+    .footer-name { font-family: var(--font-serif); font-size: 20px; color: var(--bone); }
+    .footer-copy { font-size: 13px; color: var(--sage); }
+
+    @media (max-width: 820px) {
+      .lg-grid { grid-template-columns: 1fr; }
+      .toc { position: static; flex-direction: row; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 8px; }
+      .lg-sec { scroll-margin-top: 80px; }
+      .wrap { padding: 44px 22px; }
+      .title-band-inner { padding: 44px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <svg width="21" height="35" viewBox="0 0 72 120" fill="none" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M44 56C43.4338 56 42.8738 56.0213 42.3164 56.0569C41.8978 56.0836 41.5058 56.2693 41.2071 56.5653C39.0702 58.6773 36.8018 60.6338 34.4684 62.44C33.7849 62.9698 34.1716 64.0658 35.0356 64.0231C36.3529 63.96 37.7049 64.0249 39.0809 64.2382C48.0996 65.6364 55.144 73.1396 55.9244 82.2338C56.9396 94.0747 47.6293 104 36 104C25.2996 104 16.5618 95.5964 16.0258 85.0293C16.0133 84.6871 16 84.3449 16 84V73.6684V61.4427C22.0284 57.9431 28.3067 53.5156 33.6916 48.0818C41.8551 39.8427 47.9609 29.288 48 16.1271C48.0258 7.26222 40.832 -0.00266593 31.9662 7.3389e-07C26.4098 0.00177851 21.712 0.432001 17.7733 1.09333C7.50578 2.81511 0 11.72 0 22.1298V46.0231C0 46.7262 0.778667 47.1591 1.368 46.7751C6.37511 43.5129 11.6036 39.464 15.7742 34.7573C15.9209 34.5929 16 34.3787 16 34.1582V24C16 22.8293 16.2578 21.7209 16.7093 20.7191C18.04 17.7671 21.1031 15.7636 24.6071 16.0222C28.8836 16.3387 32.0782 20.1253 31.9956 24.4133C31.9458 27.0169 31.4222 29.5236 30.5378 31.9262C27.9538 38.9467 22.2507 45.0649 16 50.0213C10.5004 54.3822 4.58489 57.8436 0 60.2311V69.1751V80V84V88C0 105.673 14.3271 120 32 120H36C37.3529 120 38.6862 119.919 40 119.773C57.9991 117.783 72 102.53 72 84C72 68.536 59.464 56 44 56" fill="#1F4A44"/>
+        </svg>
+        Lana Society
+      </a>
+      <a href="index.html" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to site
+      </a>
+    </nav>
+  </header>
+
+  <div class="title-band">
+    <div class="title-band-inner">
+      <div class="label">Legal</div>
+      <h1>Policies &amp; terms.</h1>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="disclaimer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F4A44" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      <p><strong style="color:var(--pine);font-weight:600;">Not legal advice.</strong> These are plain-language starting-point templates, not attorney-reviewed documents. Requirements vary by location. Have someone qualified review them before publishing — especially the deposit, refund, liability, and privacy terms — and fill every <code>[bracket]</code> and effective date.</p>
+    </div>
+
+    <div class="lg-grid">
+      <nav class="toc">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#cookies">Cookie notice</a>
+      </nav>
+
+      <div class="content">
+
+        <section id="privacy" class="lg-sec">
+          <h2>Privacy Policy</h2>
+          <div class="eff-date">Effective date: [date]</div>
+          <p class="lg-p">Lana Society ("we," "us," "our") runs this website and the booking it offers. This policy explains what personal information we collect, how we use it, and your choices. Questions: [email].</p>
+
+          <h3 class="lg-h3">What we collect</h3>
+          <ul class="lg-ul">
+            <li><strong>Booking and contact details</strong> you give us — name, email, phone, and anything you note about your skin or appointment.</li>
+            <li><strong>Payment information</strong> for deposits and payments. Processed by our booking provider, [Square / Cal.com]. We don't store full card numbers.</li>
+            <li><strong>Usage data</strong> — basic analytics about how the site is used, collected through cookies and similar tools. See the Cookie notice.</li>
+          </ul>
+
+          <h3 class="lg-h3">How we use it</h3>
+          <ul class="lg-ul">
+            <li>To schedule, confirm, and manage your appointments and deposits.</li>
+            <li>To contact you about your booking, or to reply to a message you send us.</li>
+            <li>To run and improve the website and our services.</li>
+            <li>To meet legal, tax, and accounting obligations.</li>
+          </ul>
+          <p class="lg-p">We do <strong>not</strong> sell your personal information.</p>
+
+          <h3 class="lg-h3">Who we share it with</h3>
+          <p class="lg-p">Only the service providers that help us operate, and only as needed:</p>
+          <ul class="lg-ul">
+            <li><strong>[Square / Cal.com]</strong> — booking and payment processing.</li>
+            <li><strong>[Hosting provider]</strong> — website hosting.</li>
+            <li><strong>[Google Analytics or similar]</strong> — website analytics, if enabled.</li>
+            <li>Professional advisors or authorities where the law requires it.</li>
+          </ul>
+
+          <h3 class="lg-h3">How long we keep it</h3>
+          <p class="lg-p">We keep appointment and payment records as long as needed for the service and for legal/tax requirements, then delete or anonymize them. [Adjust to your retention practice.]</p>
+
+          <h3 class="lg-h3">Your choices and rights</h3>
+          <p class="lg-p">You can ask us to access, correct, or delete your personal information by emailing [email]. Depending on where you live, you may have additional rights under local privacy law.</p>
+
+          <h3 class="lg-h3">Children</h3>
+          <p class="lg-p">Our services are intended for adults. If we knowingly treat a minor, we require a parent or guardian's consent. [Adjust if you accept teen clients for acne care.]</p>
+
+          <h3 class="lg-h3">Security</h3>
+          <p class="lg-p">We take reasonable measures to protect your information, but no method of transmission or storage is completely secure.</p>
+
+          <h3 class="lg-h3">Changes</h3>
+          <p class="lg-p">We may update this policy. The effective date above shows the latest version.</p>
+          <div class="lg-contact">Contact: [Business legal name] · [address] · [email] · [phone]</div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="terms" class="lg-sec">
+          <h2>Terms of Service</h2>
+          <div class="eff-date">Effective date: [date]</div>
+          <p class="lg-p">These terms apply when you book or use services from Lana Society. By booking, you agree to them.</p>
+
+          <h3 class="lg-h3">Eligibility</h3>
+          <p class="lg-p">You must be 18 or older to book online, or have a parent/guardian book and consent on your behalf. [Adjust to your policy.]</p>
+
+          <h3 class="lg-h3">Booking and deposits</h3>
+          <ul class="lg-ul">
+            <li>A <strong>50% deposit</strong> is required to reserve any appointment. The remaining balance is due at your visit.</li>
+            <li>Deposits are collected online through [Square / Cal.com] at the time of booking.</li>
+            <li>Prices are as shown at the time of booking and may change.</li>
+          </ul>
+
+          <h3 class="lg-h3">Cancellations, rescheduling, and no-shows</h3>
+          <div class="rec-box">Recommended defaults — confirm these are the rules you want, then lock them.</div>
+          <ul class="lg-ul">
+            <li><strong>Reschedule or cancel at least [24 hours] before</strong> your appointment to keep or transfer your deposit.</li>
+            <li>Cancellations <strong>within [24 hours]</strong>, or <strong>no-shows</strong>, forfeit the 50% deposit.</li>
+            <li>Arriving late may shorten your service so the next client isn't delayed.</li>
+          </ul>
+
+          <h3 class="lg-h3">Refunds</h3>
+          <ul class="lg-ul">
+            <li>Deposits are refundable only when you cancel within the window above.</li>
+            <li>Completed services are non-refundable. If you're unhappy, tell us — we'll make it right where we can.</li>
+            <li>Gift cards and packages are [non-refundable / transferable — set your policy].</li>
+          </ul>
+
+          <h3 class="lg-h3">About our services</h3>
+          <ul class="lg-ul">
+            <li>Skincare results vary from person to person and are not guaranteed.</li>
+            <li>Our services are cosmetic, not medical care, and are not a substitute for advice from a doctor or dermatologist.</li>
+            <li>Tell us about allergies, sensitivities, medications, and skin conditions before treatment.</li>
+            <li>You'll complete a consent and health form at your first visit.</li>
+          </ul>
+
+          <h3 class="lg-h3">Your conduct</h3>
+          <p class="lg-p">Please arrive on time, provide accurate information, and treat the studio and staff respectfully. We may decline service at our discretion.</p>
+
+          <h3 class="lg-h3">Intellectual property</h3>
+          <p class="lg-p">The site's content, branding, and images belong to Lana Society or its licensors and may not be reused without permission.</p>
+
+          <h3 class="lg-h3">Limitation of liability</h3>
+          <p class="lg-p">To the fullest extent allowed by law, Lana Society is not liable for indirect or incidental damages arising from use of the site or services. [Have this clause reviewed — liability limits are jurisdiction-specific.]</p>
+
+          <h3 class="lg-h3">Governing law</h3>
+          <p class="lg-p">These terms are governed by the laws of [State/Country], where the studio operates.</p>
+
+          <h3 class="lg-h3">Changes</h3>
+          <p class="lg-p">We may update these terms; the effective date shows the latest version.</p>
+          <div class="lg-contact">Contact: [Business legal name] · [address] · [email] · [phone]</div>
+        </section>
+
+        <div class="divider"></div>
+
+        <section id="cookies" class="lg-sec">
+          <h2>Cookie notice</h2>
+          <p class="lg-p">This site uses cookies and similar technologies:</p>
+          <ul class="lg-ul">
+            <li><strong>Essential</strong> — needed for the site and booking to work.</li>
+            <li><strong>Analytics</strong> — help us understand how the site is used, through [Google Analytics or similar]. [Remove if you don't use analytics.]</li>
+          </ul>
+          <p class="lg-p">By using the site you consent to these cookies. You can control or block cookies in your browser settings; blocking essential ones may affect booking. [If you serve EU/UK visitors, add a consent banner for non-essential cookies.]</p>
+          <div class="lg-contact">Questions: [email].</div>
+        </section>
+
+        <div style="margin-top:56px;">
+          <a href="index.html" class="btn btn-primary">Back to Lana Society</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-name">Lana Society</span>
+      <span class="footer-copy">© Lana Society</span>
+    </div>
+  </footer>
+</body>
+</html>
