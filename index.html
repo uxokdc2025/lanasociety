@@ -487,7 +487,6 @@
       </a>
       <div class="nav-links">
         <a href="#services" onclick="navTo(event,'services')">Services</a>
-        <a href="#plans" onclick="navTo(event,'plans')">Plans</a>
         <a href="#about" onclick="navTo(event,'about')">About</a>
         <a href="#faq" onclick="navTo(event,'faq')">FAQ</a>
         <button class="btn btn-primary" onclick="openBooking()">Book a facial</button>
@@ -498,7 +497,6 @@
     </nav>
     <div id="mobile-menu">
       <a href="#services" onclick="navTo(event,'services')">Services</a>
-      <a href="#plans" onclick="navTo(event,'plans')">Plans</a>
       <a href="#about" onclick="navTo(event,'about')">About</a>
       <a href="#faq" onclick="navTo(event,'faq')">FAQ</a>
       <div class="mobile-book">
@@ -517,7 +515,8 @@
           <span></span>Boutique skin studio
         </div>
         <h1 data-reveal>Clear, calm skin.<br>Without the fuss.</h1>
-        <p data-reveal>Lana Society is a boutique skin studio built around results, not ritual — straightforward facials and treatments in a quiet space where anyone feels at home.</p>
+        <p data-reveal style="font-size:15px;font-weight:600;color:var(--pine);margin:0 0 8px;letter-spacing:.01em;">Skincare made simple. Relax. Reset. Glow.</p>
+        <p data-reveal>Lana Society is a boutique skin studio where skincare feels effortless. We offer results-focused facials and treatments in a peaceful, welcoming space designed to help you unwind and leave relaxed.</p>
         <div class="hero-btns" data-reveal>
           <button class="btn btn-primary btn-lg" onclick="openBooking()">Book a facial</button>
           <button class="btn btn-outline btn-lg" onclick="scrollToId('services')">See the menu</button>
@@ -537,7 +536,7 @@
 
   <!-- ===== POSITIONING STRIP ===== -->
   <div class="position-strip">
-    <p data-reveal>Skincare that doesn't ask you to be a "spa person." No pink, no jargon, no pressure — just clear guidance and visible results.</p>
+    <p data-reveal>A skincare experience that's as relaxing as it is effective. Personalized treatments, honest guidance, and a warm, welcoming space designed to help you look and feel your best.</p>
   </div>
 
   <!-- ===== SERVICES ===== -->
@@ -545,34 +544,73 @@
     <div data-reveal style="max-width:620px;margin-bottom:52px;">
       <div class="sec-label">Services</div>
       <h2 class="sec-h2">Start with a facial matched to your skin.</h2>
-      <p style="font-size:17px;color:var(--charcoal);margin:0;">Every plan builds on one of these. Add targeted upgrades once you know what you need.</p>
+      <p style="font-size:17px;color:var(--charcoal);margin:0;">Every treatment is tailored to your skin's needs. Add targeted upgrades once you know what you need.</p>
     </div>
+
+    <!-- New Client Welcome callout -->
+    <div data-reveal style="background:var(--pine);border-radius:16px;padding:28px 32px;margin-bottom:40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <div>
+        <div style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);margin-bottom:8px;">New Client Welcome</div>
+        <p style="font-family:var(--font-serif);font-size:22px;color:var(--bone);margin:0;line-height:1.3;">Your first Lana Society experience includes a personalized facial with a complimentary enhancement selected for your skin's needs.</p>
+      </div>
+      <button class="btn" style="background:var(--bone);color:var(--pine);white-space:nowrap;flex-shrink:0;" onclick="openBooking()">Book your first visit</button>
+    </div>
+
     <div class="g3">
+      <div class="card" data-reveal>
+        <div class="card-head">
+          <h3 class="card-name">Skin Discovery Session</h3>
+          <span class="card-price">$60</span>
+        </div>
+        <p>A one-on-one experience designed to understand your skin, concerns, and goals. Includes a detailed skin analysis, a brief customized treatment, and personalized skincare recommendations to help you create a plan that works for you.</p>
+        <button class="btn btn-outline btn-full" onclick="openBooking()">Book this</button>
+      </div>
       <div class="card" data-reveal>
         <div class="card-head">
           <h3 class="card-name">Classic Facial</h3>
           <span class="card-price">$85</span>
         </div>
-        <p>A complete cleanse, exfoliation, extractions, and mask, tailored to your skin. The foundation every plan builds on.</p>
-        <div class="card-tag">Best for a first facial or routine upkeep</div>
+        <p>A personalized facial experience designed to restore balance, refresh your skin, and help you feel your best. Tailored to your skin's needs with expert guidance and product selection.</p>
         <button class="btn btn-outline btn-full" onclick="openBooking()">Book this</button>
       </div>
       <div class="card" data-reveal>
         <div class="card-head">
-          <h3 class="card-name">Luxury Glow Facial</h3>
+          <h3 class="card-name">Signature Glow Facial</h3>
+          <span class="card-price">$100</span>
+        </div>
+        <p>A signature Lana Society experience designed to brighten, smooth, and revive your skin. Combines restorative massage, personalized care, and expert product selection to leave your skin hydrated and refreshed.</p>
+        <button class="btn btn-outline btn-full" onclick="openBooking()">Book this</button>
+      </div>
+      <div class="card" data-reveal>
+        <div class="card-head">
+          <h3 class="card-name">Radiance Facial</h3>
           <span class="card-price">$120</span>
         </div>
-        <p>An extended treatment with deeper exfoliation, massage, and a results-focused finish for a visible glow.</p>
-        <div class="card-tag">Best for events or a noticeable refresh</div>
+        <p>Designed to refresh dull skin and improve the look of uneven tone. Focuses on brightening care and carefully selected products to reveal a more radiant, healthy-looking glow.</p>
         <button class="btn btn-outline btn-full" onclick="openBooking()">Book this</button>
       </div>
       <div class="card" data-reveal>
         <div class="card-head">
-          <h3 class="card-name">New Client Starter</h3>
-          <span class="card-price">$79</span>
+          <h3 class="card-name">Clarifying Renewal Facial</h3>
+          <span class="card-price">$120</span>
         </div>
-        <p>An initial facial plus a full skin analysis and a take-home care plan. The easiest way to start if you're not sure.</p>
-        <div class="card-tag">Best for first-timers</div>
+        <p>Designed to support congested, breakout-prone skin and restore balance. Focuses on clarifying care, targeted products, and expert guidance to help your skin feel refreshed and supported.</p>
+        <button class="btn btn-outline btn-full" onclick="openBooking()">Book this</button>
+      </div>
+      <div class="card" data-reveal>
+        <div class="card-head">
+          <h3 class="card-name">Restore &amp; Firming Facial</h3>
+          <span class="card-price">$135</span>
+        </div>
+        <p>Designed to support smoother, firmer-looking skin and promote a refreshed appearance. Focuses on nourishing care, targeted skincare, and expert product selection tailored to your skin's needs.</p>
+        <button class="btn btn-outline btn-full" onclick="openBooking()">Book this</button>
+      </div>
+      <div class="card" data-reveal>
+        <div class="card-head">
+          <h3 class="card-name">Sensitive Skin Recovery Facial</h3>
+          <span class="card-price">$120</span>
+        </div>
+        <p>Designed to calm and comfort sensitive skin while supporting a healthy skin barrier. Focuses on gentle care and carefully selected products to restore balance and confidence in your skin.</p>
         <button class="btn btn-outline btn-full" onclick="openBooking()">Book this</button>
       </div>
     </div>
@@ -614,7 +652,7 @@
     </div>
     <div class="menu-grid">
       <div class="menu-panel" data-reveal>
-        <h3>Service enhancements</h3>
+        <h3>Facial Enhancements</h3>
         <p class="sub">Targeted upgrades layered onto any facial.</p>
         <div>
           <div class="menu-row">
@@ -657,125 +695,65 @@
             </div>
             <span class="menu-row-price">$22</span>
           </div>
-          <div class="menu-row">
-            <div style="flex:1;">
-              <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;">
-                <span class="menu-row-name">Sensitive Skin Recovery</span>
-                <span class="menu-row-tag">Reactive skin</span>
-              </div>
-              <div class="menu-row-desc">Calming treatment + barrier-support products</div>
-            </div>
-            <span class="menu-row-price">$12</span>
-          </div>
         </div>
       </div>
       <div style="display:flex;flex-direction:column;gap:28px;">
         <div class="menu-panel" data-reveal>
           <h3>Modalities</h3>
-          <p class="sub">Equipment-based upgrades.</p>
+          <p class="sub">Equipment-based upgrades added to any facial.</p>
           <div class="mod-row">
             <div>
-              <div class="mod-name">High Frequency</div>
-              <div class="mod-helps">Acne, bacteria reduction, healing</div>
+              <div class="mod-name">Dermaplaning</div>
+              <div class="mod-helps">Smooth texture, peach fuzz removal</div>
             </div>
-            <span class="mod-price">$15</span>
+            <span class="mod-price">+$35</span>
           </div>
           <div class="mod-row">
             <div>
-              <div class="mod-name">Ultrasonic Skin Scrubber</div>
-              <div class="mod-helps">Congestion, product penetration</div>
+              <div class="mod-name">High Frequency</div>
+              <div class="mod-helps">Clearer skin, balanced appearance</div>
             </div>
-            <span class="mod-price">$15</span>
+            <span class="mod-price">+$15</span>
+          </div>
+          <div class="mod-row">
+            <div>
+              <div class="mod-name">Gua Sha</div>
+              <div class="mod-helps">Reduce puffiness, sculpted look</div>
+            </div>
+            <span class="mod-price">+$10</span>
           </div>
           <div class="mod-row">
             <div>
               <div class="mod-name">Microdermabrasion</div>
-              <div class="mod-helps">Texture, fine lines, pigmentation</div>
+              <div class="mod-helps">Texture, fine lines, uneven tone</div>
             </div>
-            <span class="mod-price">$35</span>
+            <span class="mod-price">+$35</span>
           </div>
           <div class="mod-row">
             <div>
               <div class="mod-name">LED Light Therapy</div>
-              <div class="mod-helps">Blue for acne, red for aging</div>
+              <div class="mod-helps">Breakouts to skin renewal</div>
             </div>
-            <span class="mod-price">$20</span>
+            <span class="mod-price">+$20</span>
           </div>
-        </div>
-        <div class="addons-panel" data-reveal>
-          <h3>Add-ons</h3>
-          <div class="addon-row"><span class="addon-name">Ice Globe Massage</span><span class="addon-price">$10</span></div>
-          <div class="addon-row"><span class="addon-name">Gua Sha Facial Massage</span><span class="addon-price">$15</span></div>
-          <div class="addon-row"><span class="addon-name">Lip Treatment</span><span class="addon-price">$10</span></div>
-          <div class="addon-row"><span class="addon-name">Eye Treatment</span><span class="addon-price">$10</span></div>
-          <div class="addon-row"><span class="addon-name">Scalp Massage</span><span class="addon-price">$15</span></div>
-          <div class="addon-row"><span class="addon-name">Hand Treatment</span><span class="addon-price">$10</span></div>
-          <div class="addon-row"><span class="addon-name">Extended Facial Massage</span><span class="addon-price">$15</span></div>
+          <div class="mod-row">
+            <div>
+              <div class="mod-name">Cold Globes</div>
+              <div class="mod-helps">Soothe, depuff, refreshing reset</div>
+            </div>
+            <span class="mod-price">+$15</span>
+          </div>
+          <div class="mod-row">
+            <div>
+              <div class="mod-name">Lip + Eye Treatment</div>
+              <div class="mod-helps">Hydrate &amp; refresh delicate areas</div>
+            </div>
+            <span class="mod-price">+$15</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- ===== PLANS ===== -->
-  <div id="plans" style="background:var(--sand);">
-    <section class="sec">
-      <div data-reveal style="max-width:620px;margin-bottom:52px;">
-        <div class="sec-label">Plans</div>
-        <h2 class="sec-h2">Programs built around a goal.</h2>
-        <p style="font-size:17px;color:var(--charcoal);margin:0;">Multi-treatment plans that combine the right facial, upgrades, and modalities — and save you money.</p>
-      </div>
-      <div class="g3">
-        <div class="plan-card" data-reveal>
-          <div class="plan-head">
-            <h3 class="plan-name">Acne Clear Program</h3>
-            <span class="plan-save">Save $30</span>
-          </div>
-          <div class="plan-price">$240</div>
-          <div class="plan-meta">3 treatments · Classic + Acne Defense + High Frequency</div>
-          <p class="plan-desc">Reduce breakouts and congestion. Every 2 weeks in month 1, then monthly.</p>
-          <button class="btn btn-primary btn-full" onclick="openBooking()">Start this plan</button>
-        </div>
-        <div class="plan-card" data-reveal>
-          <div class="plan-head">
-            <h3 class="plan-name">Anti-Aging Renewal</h3>
-            <span class="plan-save">Save $30</span>
-          </div>
-          <div class="plan-price">$330</div>
-          <div class="plan-meta">3 treatments · Luxury Glow + LED red + Firming</div>
-          <p class="plan-desc">Fine lines, firmness, glow. A monthly Luxury Glow Facial program.</p>
-          <button class="btn btn-primary btn-full" onclick="openBooking()">Start this plan</button>
-        </div>
-        <div class="plan-card" data-reveal>
-          <div class="plan-head">
-            <h3 class="plan-name">Brightening Plan</h3>
-            <span class="plan-save">Save $30</span>
-          </div>
-          <div class="plan-price">$285</div>
-          <div class="plan-meta">3 treatments · Classic + Brightening + Microdermabrasion</div>
-          <p class="plan-desc">Dark spots and even tone. Every 3–4 weeks.</p>
-          <button class="btn btn-primary btn-full" onclick="openBooking()">Start this plan</button>
-        </div>
-        <div class="plan-card" data-reveal>
-          <div class="plan-head">
-            <h3 class="plan-name">Bridal Glow Package</h3>
-          </div>
-          <div class="plan-price">$395</div>
-          <div class="plan-meta">3 treatments · Luxury Glow + Brightening + LED</div>
-          <p class="plan-desc">Start 3–6 months before the wedding. Three glow facials.</p>
-          <button class="btn btn-primary btn-full" onclick="openBooking()">Start this plan</button>
-        </div>
-        <div class="plan-card" data-reveal>
-          <div class="plan-head">
-            <h3 class="plan-name">New Client Starter</h3>
-          </div>
-          <div class="plan-price">$79</div>
-          <div class="plan-meta">Single visit · facial + skin analysis</div>
-          <p class="plan-desc">Initial facial, skin analysis, and a home-care plan. Perfect if you're new.</p>
-          <button class="btn btn-primary btn-full" onclick="openBooking()">Start this plan</button>
-        </div>
-      </div>
-    </section>
-  </div>
 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="sec">
@@ -785,24 +763,25 @@
       </div>
       <div>
         <div data-reveal class="sec-label">About</div>
-        <h2 data-reveal class="sec-h2" style="font-size:36px;">A quieter, clearer kind of skin studio.</h2>
-        <p data-reveal style="font-size:17px;color:var(--charcoal);margin:0 0 28px;">Lana Society was started by <strong>[Name]</strong>, a licensed esthetician who wanted a skincare studio that felt different — quieter, clearer, and open to people who'd never think to book a facial. <span style="color:var(--muted-fg);">[One or two sentences: her background, why she started, her approach.]</span> Every treatment here is chosen for what it does, explained plainly, and done in a calm private room. No crowded spa floor, no upsell theater.</p>
+        <h2 data-reveal class="sec-h2" style="font-size:36px;">A quieter, more personal approach to skincare.</h2>
+        <p data-reveal style="font-size:17px;color:var(--charcoal);margin:0 0 14px;">Lana Society was created by Alana, a licensed esthetician with a passion for helping people feel confident and comfortable in their own skin. After seeing how intimidating skincare can feel, she wanted to create an experience that felt welcoming, simple, and personalized — a place where anyone could feel at ease, whether it's their first facial or part of their regular routine.</p>
+        <p data-reveal style="font-size:17px;color:var(--charcoal);margin:0 0 28px;">Every treatment is thoughtfully chosen based on your skin's needs and goals. With honest guidance, personalized care, and a calm private setting, each appointment is designed to help you better understand your skin and leave feeling refreshed, cared for, and confident.</p>
         <div class="g2" data-reveal>
           <div class="about-diff">
-            <div class="about-diff-title">A calm, private room</div>
-            <div class="about-diff-body">One client at a time. No noise, no rush.</div>
+            <div class="about-diff-title">A Calm, Private Experience</div>
+            <div class="about-diff-body">One client at a time. A quiet space where you can fully relax without feeling rushed.</div>
           </div>
           <div class="about-diff">
-            <div class="about-diff-title">Plain talk</div>
-            <div class="about-diff-body">You'll always know what a treatment does and why it's on your plan.</div>
+            <div class="about-diff-title">Simple, Honest Guidance</div>
+            <div class="about-diff-body">You'll always understand what your skin needs, why a treatment is recommended, and how to care for it moving forward.</div>
           </div>
           <div class="about-diff">
-            <div class="about-diff-title">Results first</div>
-            <div class="about-diff-body">Every add-on earns its place. Nothing's there for show.</div>
+            <div class="about-diff-title">Skincare With Purpose</div>
+            <div class="about-diff-body">Every treatment and enhancement has a reason behind it — focused on supporting your skin, not adding unnecessary steps.</div>
           </div>
           <div class="about-diff">
-            <div class="about-diff-title">Genuinely for everyone</div>
-            <div class="about-diff-body">Comfortable for first-timers and for men who've never felt this was for them.</div>
+            <div class="about-diff-title">A Place For Everyone</div>
+            <div class="about-diff-body">Whether you're new to facials or already invested in your skincare, Lana Society is a comfortable place to begin.</div>
           </div>
         </div>
       </div>
@@ -865,35 +844,70 @@
             Do I have to pay upfront?
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="faq-body">A 50% deposit reserves your appointment; the balance is due at your visit. It keeps the schedule fair for everyone.</div>
+          <div class="faq-body">A 50% deposit is required to reserve your appointment. The remaining balance is due at your visit. This helps keep appointments available and ensures a smooth experience for every guest.</div>
         </div>
         <div class="faq-item">
           <button class="faq-trigger" onclick="toggleFaq(this)">
             I've never had a facial. Is that okay?
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="faq-body">Completely. Book the New Client Starter — you'll get a skin analysis and a simple plan before anything else.</div>
+          <div class="faq-body">Absolutely. Many clients start here. The New Client Facial includes a skin analysis and personalized guidance so you can feel comfortable knowing what your skin needs before moving forward.</div>
         </div>
         <div class="faq-item">
           <button class="faq-trigger" onclick="toggleFaq(this)">
-            Is this only for men?
+            Is Lana Society only for women?
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="faq-body">No. Lana Society is for everyone. It just happens to be plain and low-pressure enough that guys who've never booked a facial feel at home here.</div>
+          <div class="faq-body">No. Lana Society is for everyone. The experience is designed to feel comfortable, straightforward, and welcoming for anyone who wants to better understand and care for their skin.</div>
         </div>
         <div class="faq-item">
           <button class="faq-trigger" onclick="toggleFaq(this)">
-            What if I don't know which service to pick?
+            What if I don't know which service to choose?
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="faq-body">Start with the New Client Starter. We'll look at your skin and map out what actually helps.</div>
+          <div class="faq-body">Start with the New Client Facial. We'll take time to understand your skin, discuss your goals, and recommend the best treatment approach for you.</div>
         </div>
         <div class="faq-item">
           <button class="faq-trigger" onclick="toggleFaq(this)">
-            What's the cancellation policy?
+            Where are you located?
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
           </button>
-          <div class="faq-body">[Placeholder — set your window, e.g. "Reschedule or cancel at least 24 hours ahead to keep your deposit."]</div>
+          <div class="faq-body">Lana Society is a private, appointment-only skincare studio. Location details are provided after booking confirmation.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            How long is each appointment?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-body">Appointment times vary depending on the service selected. Most facial experiences are designed to allow time for your consultation, customized treatment, and relaxation without feeling rushed.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            What should I expect during my first visit?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-body">Your first visit begins with a conversation about your skin, concerns, and goals. We'll complete a skin analysis, discuss recommendations, and create a treatment experience tailored to your needs.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            Can I get a facial if I have sensitive skin or acne?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-body">Yes. Every treatment is customized based on your skin's current needs. We'll choose products and techniques that support your skin while addressing your concerns.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            Do you offer skincare recommendations or products?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-body">Yes. Recommendations are based on your skin goals, lifestyle, and what will realistically work for you. The goal is to create a simple routine you feel confident maintaining.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" onclick="toggleFaq(this)">
+            What is the cancellation policy?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-body">Appointments may be rescheduled or canceled with at least 24 hours' notice. Changes made within this timeframe may result in the loss of your deposit.</div>
         </div>
       </div>
     </section>
@@ -937,43 +951,6 @@
     </div>
   </section>
 
-  <!-- ===== AREAS WE SERVE ===== -->
-  <section id="service-area" style="background:var(--pine);padding:64px 24px;">
-    <div style="max-width:900px;margin:0 auto;text-align:center;">
-      <h2 style="font-family:var(--font-serif);font-weight:400;font-size:32px;color:var(--bone);margin:0 0 12px;letter-spacing:-.01em;">Serving Dallas–Fort Worth & Ellis County</h2>
-      <p style="color:var(--sage);font-size:16px;margin:0 0 32px;max-width:600px;margin-left:auto;margin-right:auto;">We welcome clients from across the DFW Metroplex and Ellis County — wherever you're coming from, clear skin is close by.</p>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 20px;">
-        <li style="color:var(--bone);font-size:15px;">Waxahachie, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Dallas, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Duncanville, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Cedar Hill, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Midlothian, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">DeSoto, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Lancaster, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Mansfield, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Ovilla, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Red Oak, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Glenn Heights, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Maypearl, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Ennis, TX</li>
-        <li style="color:var(--sage);">·</li>
-        <li style="color:var(--bone);font-size:15px;">Italy, TX</li>
-      </ul>
-    </div>
-  </section>
-
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-inner">
@@ -985,21 +962,21 @@
             </svg>
             <span class="footer-brand-name">Lana Society</span>
           </div>
-          <p class="footer-tagline">Clear, calm skin.</p>
+          <p class="footer-tagline">Skincare made simple.</p>
         </div>
         <div>
           <div class="footer-col-label">Visit</div>
-          <div class="footer-col-body">Hours: [placeholder]<br>Location: [placeholder]</div>
+          <div class="footer-col-body">Hours: Vary<br>Location: Venus, TX<br><span style="font-size:13px;opacity:.7;">Appointment-only studio — address provided after booking.</span></div>
         </div>
         <div>
           <div class="footer-col-label">Contact</div>
-          <div class="footer-col-body">[email placeholder]<br>[phone placeholder]<br><a href="#" style="color:var(--sage);">Instagram [@handle]</a></div>
+          <div class="footer-col-body"><a href="mailto:connectwith.lanasociety@gmail.com" style="color:var(--bone);opacity:.85;">connectwith.lanasociety@gmail.com</a><br><a href="#" style="color:var(--sage);">Instagram [@handle]</a></div>
         </div>
         <div>
           <div class="footer-col-label">Explore</div>
           <div class="footer-col-links">
             <a href="#services" onclick="navTo(event,'services')">Services</a>
-            <a href="#plans" onclick="navTo(event,'plans')">Plans</a>
+            <a href="#about" onclick="navTo(event,'about')">About</a>
             <a href="#faq" onclick="navTo(event,'faq')">FAQ</a>
           </div>
         </div>
