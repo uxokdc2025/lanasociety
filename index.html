@@ -912,21 +912,26 @@
       </div>
       <div data-reveal class="contact-form-wrap">
         <div id="contact-form-wrap">
-          <form onsubmit="submitContact(event)" style="display:flex;flex-direction:column;gap:16px;">
+          <form id="contact-form" onsubmit="submitContact(event)" style="display:flex;flex-direction:column;gap:16px;">
+            <input type="hidden" name="access_key" value="PASTE_WEB3FORMS_KEY_HERE">
+            <input type="hidden" name="subject" value="New Inquiry — Lana Society">
+            <input type="hidden" name="from_name" value="Lana Society Website">
+            <input type="hidden" name="botcheck" value="" style="display:none">
             <h3>Send a note</h3>
             <div class="field">
               <label for="c-name">Name</label>
-              <input id="c-name" type="text" placeholder="Your name" required>
+              <input id="c-name" name="name" type="text" placeholder="Your name" required>
             </div>
             <div class="field">
               <label for="c-email">Email</label>
-              <input id="c-email" type="email" placeholder="you@example.com" required>
+              <input id="c-email" name="email" type="email" placeholder="you@example.com" required>
             </div>
             <div class="field">
               <label for="c-msg">Message</label>
-              <textarea id="c-msg" placeholder="What can we help with?"></textarea>
+              <textarea id="c-msg" name="message" placeholder="What can we help with?"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-full" style="height:44px;font-size:15px;">Send note</button>
+            <div id="contact-error" class="form-error hidden">Something went wrong. Please try again.</div>
+            <button type="submit" id="contact-btn" class="btn btn-primary btn-full" style="height:44px;font-size:15px;">Send note</button>
           </form>
         </div>
         <div id="contact-success" class="contact-success hidden">
@@ -991,37 +996,40 @@
       <div id="booking-form-wrap">
         <h2>Book a facial</h2>
         <p class="modal-desc">Tell us a little and we'll confirm your time.</p>
-        <form onsubmit="submitBooking(event)" style="display:flex;flex-direction:column;gap:16px;">
+        <form id="booking-form" onsubmit="submitBooking(event)" style="display:flex;flex-direction:column;gap:16px;">
+          <input type="hidden" name="access_key" value="PASTE_WEB3FORMS_KEY_HERE">
+          <input type="hidden" name="subject" value="New Booking Request — Lana Society">
+          <input type="hidden" name="from_name" value="Lana Society Website">
+          <input type="hidden" name="botcheck" value="" style="display:none">
           <div class="field">
             <label for="b-service">Service</label>
-            <select id="b-service">
-              <option value="classic">Classic Facial — $85</option>
-              <option value="luxury">Luxury Glow Facial — $120</option>
-              <option value="starter">New Client Starter — $79</option>
-              <option disabled>──────────</option>
-              <option value="acne-plan">Acne Clear Program — $240</option>
-              <option value="aging-plan">Anti-Aging Renewal Plan — $330</option>
-              <option value="bright-plan">Hyperpigmentation &amp; Brightening — $285</option>
-              <option value="bridal">Bridal Glow Package — $395</option>
+            <select id="b-service" name="service">
+              <option value="Skin Discovery Session — $60">Skin Discovery Session — $60</option>
+              <option value="Classic Facial — $85">Classic Facial — $85</option>
+              <option value="Signature Glow Facial — $100">Signature Glow Facial — $100</option>
+              <option value="Radiance Facial — $120">Radiance Facial — $120</option>
+              <option value="Clarifying Renewal Facial — $120">Clarifying Renewal Facial — $120</option>
+              <option value="Restore &amp; Firming Facial — $135">Restore &amp; Firming Facial — $135</option>
+              <option value="Sensitive Skin Recovery Facial — $120">Sensitive Skin Recovery Facial — $120</option>
             </select>
           </div>
           <div class="form-row">
             <div class="field">
               <label for="b-name">Name</label>
-              <input id="b-name" type="text" placeholder="Your name">
+              <input id="b-name" name="name" type="text" placeholder="Your name" required>
             </div>
             <div class="field">
               <label for="b-phone">Phone</label>
-              <input id="b-phone" type="tel" placeholder="(000) 000-0000">
+              <input id="b-phone" name="phone" type="tel" placeholder="(000) 000-0000">
             </div>
           </div>
           <div class="field">
             <label for="b-email">Email</label>
-            <input id="b-email" type="email" placeholder="you@example.com">
+            <input id="b-email" name="email" type="email" placeholder="you@example.com" required>
           </div>
           <div class="field">
             <label for="b-notes">Anything we should know?</label>
-            <textarea id="b-notes" placeholder="Skin concerns, questions, timing…"></textarea>
+            <textarea id="b-notes" name="message" placeholder="Skin concerns, questions, timing…"></textarea>
           </div>
           <div class="form-note">A 50% deposit reserves your time; you pay the balance at your visit. We'll send a secure payment link once your slot is confirmed.</div>
           <div id="booking-error" class="form-error hidden">Please add your name and email so we can confirm.</div>
@@ -1116,7 +1124,7 @@
       document.getElementById('booking-modal').classList.remove('open');
       document.body.style.overflow = '';
     }
-    function submitBooking(e) {
+    async function submitBooking(e) {
       e.preventDefault();
       const name = document.getElementById('b-name').value.trim();
       const email = document.getElementById('b-email').value.trim();
@@ -1125,8 +1133,23 @@
         return;
       }
       document.getElementById('booking-error').classList.add('hidden');
-      document.getElementById('booking-form-wrap').classList.add('hidden');
-      document.getElementById('booking-success').classList.remove('hidden');
+      const btn = e.target.querySelector('[type=submit]');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      try {
+        const data = new FormData(document.getElementById('booking-form'));
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        const json = await res.json();
+        if (json.success) {
+          document.getElementById('booking-form-wrap').classList.add('hidden');
+          document.getElementById('booking-success').classList.remove('hidden');
+        } else {
+          throw new Error(json.message);
+        }
+      } catch {
+        btn.disabled = false; btn.textContent = 'Request this time';
+        document.getElementById('booking-error').textContent = 'Something went wrong. Please try again.';
+        document.getElementById('booking-error').classList.remove('hidden');
+      }
     }
     function backdropClose(e, id) {
       if (e.target === e.currentTarget) {
@@ -1136,10 +1159,24 @@
     }
 
     /* ---- Contact form ---- */
-    function submitContact(e) {
+    async function submitContact(e) {
       e.preventDefault();
-      document.getElementById('contact-form-wrap').classList.add('hidden');
-      document.getElementById('contact-success').classList.remove('hidden');
+      const btn = document.getElementById('contact-btn');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      try {
+        const data = new FormData(document.getElementById('contact-form'));
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        const json = await res.json();
+        if (json.success) {
+          document.getElementById('contact-form-wrap').classList.add('hidden');
+          document.getElementById('contact-success').classList.remove('hidden');
+        } else {
+          throw new Error(json.message);
+        }
+      } catch {
+        btn.disabled = false; btn.textContent = 'Send note';
+        document.getElementById('contact-error').classList.remove('hidden');
+      }
     }
 
     /* ---- Lightbox ---- */
