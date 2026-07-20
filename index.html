@@ -788,17 +788,6 @@
     </div>
   </section>
 
-  <!-- ===== TESTIMONIALS ===== -->
-  <div class="testimonials-wrap">
-    <div class="testimonials">
-      <div data-reveal class="testimonials-label">In their words</div>
-      <div data-reveal>
-        <blockquote id="quote-text">"[Short quote about feeling comfortable and seeing results.]"</blockquote>
-        <div class="testimonials-author" id="quote-author">— [First name, L.]</div>
-      </div>
-      <div class="testimonials-dots" id="t-dots"></div>
-    </div>
-  </div>
 
   <!-- ===== GALLERY ===== -->
   <section class="sec">
@@ -970,7 +959,7 @@
         </div>
         <div>
           <div class="footer-col-label">Contact</div>
-          <div class="footer-col-body"><a href="mailto:connectwith.lanasociety@gmail.com" style="color:var(--bone);opacity:.85;">connectwith.lanasociety@gmail.com</a><br><a href="#" style="color:var(--sage);">Instagram [@handle]</a></div>
+          <div class="footer-col-body"><a href="mailto:connectwith.lanasociety@gmail.com" style="color:var(--bone);opacity:.85;">connectwith.lanasociety@gmail.com</a></div>
         </div>
         <div>
           <div class="footer-col-label">Explore</div>
@@ -982,7 +971,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-small">A 50% deposit is required to book. Balance due at your visit. [Cancellation line placeholder.]</p>
+        <p class="footer-small">A 50% deposit is required to book. Balance due at your visit. Appointments may be rescheduled or canceled with at least 24 hours' notice.</p>
         <div class="footer-legal">
           <a href="legal.html#privacy">Privacy</a>
           <a href="legal.html#terms">Terms</a>
@@ -1108,34 +1097,6 @@
     }
 
     /* ---- Testimonials ---- */
-    const testimonials = [
-      { quote: '"[Short quote about feeling comfortable and seeing results.]"', author: '— [First name, L.]' },
-      { quote: '"[Short quote about the plain, no-pressure approach.]"', author: '— [First name, L.]' },
-      { quote: '"[Short quote about a specific outcome — clearer skin, first facial.]"', author: '— [First name, L.]' },
-    ];
-    let tIdx = 0;
-    const qEl = document.getElementById('quote-text');
-    const aEl = document.getElementById('quote-author');
-    const dotsEl = document.getElementById('t-dots');
-
-    function renderDots() {
-      dotsEl.innerHTML = testimonials.map((_, i) =>
-        `<button class="${i === tIdx ? 'active' : ''}" onclick="goTestimonial(${i})" aria-label="Testimonial ${i+1}"></button>`
-      ).join('');
-    }
-    function goTestimonial(i) {
-      tIdx = i;
-      qEl.style.opacity = '0';
-      setTimeout(() => {
-        qEl.textContent = testimonials[tIdx].quote;
-        aEl.textContent = testimonials[tIdx].author;
-        qEl.style.opacity = '1';
-        renderDots();
-      }, 200);
-    }
-    renderDots();
-    setInterval(() => goTestimonial((tIdx + 1) % testimonials.length), 5500);
-
     /* ---- FAQ accordion ---- */
     function toggleFaq(btn) {
       const item = btn.closest('.faq-item');
