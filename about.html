@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Meet Alana | Lana Society Skin Studio</title>
+  <meta name="description" content="Lana Society was created by Alana Cervantes, a licensed esthetician offering a quieter, more personal approach to skincare in Waxahachie and the DFW area.">
+  <link rel="canonical" href="https://www.lanasociety.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About — Meet Alana | Lana Society">
+  <meta property="og:description" content="A quieter, more personal approach to skincare. Meet Alana Cervantes, licensed esthetician and founder of Lana Society.">
+  <meta property="og:site_name" content="Lana Society">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 120'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M44 56C43.4338 56 42.8738 56.0213 42.3164 56.0569C41.8978 56.0836 41.5058 56.2693 41.2071 56.5653C39.0702 58.6773 36.8018 60.6338 34.4684 62.44C33.7849 62.9698 34.1716 64.0658 35.0356 64.0231C36.3529 63.96 37.7049 64.0249 39.0809 64.2382C48.0996 65.6364 55.144 73.1396 55.9244 82.2338C56.9396 94.0747 47.6293 104 36 104C25.2996 104 16.5618 95.5964 16.0258 85.0293C16.0133 84.6871 16 84.3449 16 84V73.6684V61.4427C22.0284 57.9431 28.3067 53.5156 33.6916 48.0818C41.8551 39.8427 47.9609 29.288 48 16.1271C48.0258 7.26222 40.832 -0.00266593 31.9662 7.3389e-07C26.4098 0.00177851 21.712 0.432001 17.7733 1.09333C7.50578 2.81511 0 11.72 0 22.1298V46.0231C0 46.7262 0.778667 47.1591 1.368 46.7751C6.37511 43.5129 11.6036 39.464 15.7742 34.7573C15.9209 34.5929 16 34.3787 16 34.1582V24C16 22.8293 16.2578 21.7209 16.7093 20.7191C18.04 17.7671 21.1031 15.7636 24.6071 16.0222C28.8836 16.3387 32.0782 20.1253 31.9956 24.4133C31.9458 27.0169 31.4222 29.5236 30.5378 31.9262C27.9538 38.9467 22.2507 45.0649 16 50.0213C10.5004 54.3822 4.58489 57.8436 0 60.2311V69.1751V80V84V88C0 105.673 14.3271 120 32 120H36C37.3529 120 38.6862 119.919 40 119.773C57.9991 117.783 72 102.53 72 84C72 68.536 59.464 56 44 56' fill='%23241b14'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand" aria-label="Lana Society — home">
+        <span class="brand-name">Lana Society</span>
+        <span class="brand-sub">Skin · Wellness · Community</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html" class="active">About</a>
+        <a href="index.html#contact">Contact</a>
+        <button class="btn btn-ghost btn-sm" onclick="book()">Book Now</button>
+      </nav>
+      <button class="burger" aria-label="Open menu" onclick="toggleMenu()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" aria-label="Close menu" onclick="closeMobileMenu()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <a href="index.html" onclick="closeMobileMenu()">Home</a>
+    <a href="services.html" onclick="closeMobileMenu()">Services</a>
+    <a href="about.html" onclick="closeMobileMenu()">About</a>
+    <a href="index.html#contact" onclick="closeMobileMenu()">Contact</a>
+    <button class="btn btn-ghost" onclick="book()">Book Now</button>
+  </div>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero" style="padding-top:150px;">
+    <div class="wrap sec" style="padding-top:0;">
+      <div class="about-grid light">
+        <div data-reveal>
+          <div class="eyebrow on-dark" style="margin-bottom:18px;">About</div>
+          <h2 class="h2" style="color:var(--cream-fg);font-size:clamp(32px,4.6vw,52px);margin-bottom:24px;">A quieter, more personal approach to skincare.</h2>
+          <p class="lead" style="color:var(--cream-fg);opacity:.9;margin:0 0 18px;">Lana Society was created by Alana Cervantes, a licensed esthetician with a passion for helping people feel confident and comfortable in their own skin. After seeing how intimidating skincare can feel, she wanted to create an experience that felt welcoming, simple, and personalized — a place where anyone could feel at ease, whether it's their first facial or part of their regular routine.</p>
+          <p class="lead" style="color:var(--cream-fg);opacity:.9;margin:0;">Every treatment is thoughtfully chosen based on your skin's needs and goals. With honest guidance, personalized care, and a calm private setting, each appointment is designed to help you better understand your skin and leave feeling refreshed, cared for, and confident.</p>
+        </div>
+        <div class="about-media arch" data-reveal>
+          <img src="assets/about-room-arch.webp" alt="Calm treatment room with a tall arched window and soft leaf shadows">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values">
+    <div class="wrap sec">
+      <div class="values-grid">
+        <div class="value" data-reveal>
+          <div class="ic"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42V16"/><path d="M24 26c-5-7-14-9-21-7 2 9 11 15 21 13M24 20c5-8 14-10 22-7-2 9-12 16-22 13"/></svg></div>
+          <h4>A Calm, Private Experience</h4>
+          <p>One client at a time. A quiet space where you can fully relax without feeling rushed.</p>
+        </div>
+        <div class="value" data-reveal>
+          <div class="ic"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42V18"/><path d="M24 28c-4-6-11-8-17-6 1 7 8 12 17 11M24 24c4-7 11-9 18-6-1 7-9 13-18 11M24 18a5 5 0 1 1 0-.1Z"/></svg></div>
+          <h4>Simple, Honest Guidance</h4>
+          <p>You'll always understand what your skin needs, why a treatment is recommended, and how to care for it moving forward.</p>
+        </div>
+        <div class="value" data-reveal>
+          <div class="ic"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42V14"/><path d="M24 30c-6-4-13-3-18 2 4 5 12 6 18 2M24 24c6-4 13-3 18 2-4 5-12 6-18 2M24 20c-4-4-4-10-1-14 4 3 5 9 1 14"/></svg></div>
+          <h4>Skincare With Purpose</h4>
+          <p>Every treatment and enhancement has a reason behind it — focused on supporting your skin, not adding unnecessary steps.</p>
+        </div>
+        <div class="value" data-reveal>
+          <div class="ic"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42V20"/><path d="M24 30c-5-5-13-5-19-1 3 6 11 8 19 4M24 26c5-5 13-5 19-1-3 6-11 8-19 4M20 14c1 3 4 5 4 5s3-2 4-5-1-6-4-7c-3 1-5 4-4 7Z"/></svg></div>
+          <h4>A Place For Everyone</h4>
+          <p>Whether you're new to facials or already invested in your skincare, Lana Society is a comfortable place to begin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO GALLERY -->
+  <section class="wrap sec">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">The Space</span>
+      <hr class="rule">
+    </div>
+    <div class="about-trio" data-reveal>
+      <div class="t wide"><img src="assets/about-1.webp" alt="Cozy spa treatment room with candles and a leafy plant by the window"></div>
+      <div class="t"><img src="assets/about-2.webp" alt="Lit candle and eucalyptus on a wooden surface"></div>
+      <div class="t"><img src="assets/about-3.webp" alt="Brass faucet over a clean basin with a small potted plant"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="band-dark sec">
+    <div class="band-bg"><img src="assets/band-knit.webp" alt=""></div>
+    <div class="wrap" style="text-align:center;">
+      <p class="script" data-reveal style="font-size:38px;color:#a9b493;margin:0 0 12px;">Come as you are.</p>
+      <h2 class="band-title" data-reveal style="margin-bottom:28px;">Book Your First Visit</h2>
+      <div data-reveal><button class="btn btn-ghost" onclick="book()">Book a facial</button></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-name">Lana Society</span>
+            <span class="brand-sub">Skin · Wellness · Community</span>
+          </div>
+          <p class="footer-tag">Real skin. Thoughtful care.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Visit</h5>
+          <p>Waxahachie, TX</p>
+          <p style="opacity:.6;">Appointment-only studio — address shared after booking.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="mailto:Lanasociety.connect@gmail.com">Lanasociety.connect@gmail.com</a>
+          <a href="https://instagram.com/lanasociety.skin" target="_blank" rel="noopener">@lanasociety.skin</a>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>A deposit reserves your appointment; the balance is due at your visit. Please allow at least 24 hours' notice to reschedule or cancel.</p>
+        <div class="footer-legal">
+          <a href="legal.html#privacy">Privacy</a>
+          <a href="legal.html#terms">Terms</a>
+          <a href="legal.html#cookies">Cookies</a>
+          <span style="color:var(--cream-mut);opacity:.6;">© Lana Society</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>
