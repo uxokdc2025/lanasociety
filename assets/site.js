@@ -27,28 +27,40 @@ function book() {
   }
 }
 
-/* ---- Scroll reveal ---- */
+/* ---- Scroll reveal (ported from the Nestre marketing site) ----
+   Plain scroll + resize listener with a rect check — reliable after nav,
+   reveals above-the-fold on load, self-removes when nothing's left. */
 (function () {
   const reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches;
   if (reduced) return;
   document.documentElement.classList.add("armed");
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-      });
-    },
-    { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
-  );
-  const vh = window.innerHeight;
-  document.querySelectorAll("[data-reveal]").forEach((el) => {
-    // Reveal above-the-fold content immediately (no blank flash); observe the rest.
-    if (el.getBoundingClientRect().top < vh * 0.9) {
-      el.classList.add("in");
-    } else {
-      io.observe(el);
-    }
+
+  const cardSel = ".jcard, .experience-media, .about-media, .seasonal-media, .brow-media";
+  const tagged = [...document.querySelectorAll("[data-reveal]")];
+
+  // Stagger index: cards restart within their own grid; text cascades globally (cap 12).
+  tagged.forEach((el, i) => {
+    const isCard = el.matches(cardSel);
+    const idx = isCard
+      ? [...el.parentElement.children].filter((c) => c.matches(cardSel)).indexOf(el)
+      : Math.min(i, 12);
+    el.style.setProperty("--i", String(idx < 0 ? 0 : idx));
   });
+
+  const reveal = () => {
+    const vh = window.innerHeight;
+    let remaining = false;
+    for (const el of tagged) {
+      if (el.classList.contains("in")) continue;
+      const r = el.getBoundingClientRect();
+      if (r.top < vh * 0.92 && r.bottom > -40) el.classList.add("in");
+      else remaining = true;
+    }
+    if (!remaining) window.removeEventListener("scroll", reveal);
+  };
+  reveal();
+  window.addEventListener("scroll", reveal, { passive: true });
+  window.addEventListener("resize", reveal);
 })();
 
 /* ---- Nav: solid on scroll ---- */
