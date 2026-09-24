@@ -11,7 +11,7 @@
    Leave empty ("") until it exists — buttons fall back to the
    contact section so nothing dead-ends.
 ----------------------------------------------------------- */
-const BOOKING_URL = ""; // e.g. "https://book.squareup.com/appointments/xxxxxxxx/location/yyyyyyyy"
+const BOOKING_URL = "https://book.squareup.com/appointments/1867jlorbqydip/location/L000CDTPVPY0R/services";
 
 function book() {
   closeMobileMenu();
