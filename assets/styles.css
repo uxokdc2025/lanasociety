@@ -32,7 +32,7 @@
   --serif:  'Cormorant Garamond', Georgia, serif;
   --body:   'EB Garamond', Georgia, serif;
   --ui:     'Jost', system-ui, sans-serif;
-  --script: 'Dancing Script', 'Segoe Script', cursive;
+  --script: 'Petit Formal Script', 'Segoe Script', cursive;
 
   --wrap: 1180px;
 }
@@ -75,12 +75,12 @@ a { color: inherit; text-decoration: none; transition: color .18s, opacity .18s;
 }
 
 /* ---------- Type helpers ---------- */
-.script { font-family: var(--script); font-weight: 600; line-height: 1.05; color: var(--sage); }
-/* Dancing Script reads best with a little weight — apply everywhere the script face is used.
+.script { font-family: var(--script); font-weight: 400; line-height: 1.1; color: var(--sage); }
+/* Script face applied everywhere it's used (Petit Formal Script is single-weight 400).
    .hero .hero-script/.hero-tag need class-level specificity to beat the `.hero p` rule. */
 .hero .hero-script, .hero .hero-tag, .display-script, .experience-quote, .jcard-title,
 .leaving-lead p, .leaving-lead .script, .footer-tag {
-  font-family: var(--script); font-weight: 600;
+  font-family: var(--script); font-weight: 400;
 }
 .eyebrow {
   font-family: var(--ui); font-weight: 400;
