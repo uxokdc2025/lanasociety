@@ -32,9 +32,19 @@
   --serif:  'Cormorant Garamond', Georgia, serif;
   --body:   'EB Garamond', Georgia, serif;
   --ui:     'Jost', system-ui, sans-serif;
-  --script: 'Petit Formal Script', 'Segoe Script', cursive;
+  --script: 'Seramonde', 'Petit Formal Script', cursive;
 
   --wrap: 1180px;
+}
+
+/* Licensed Seramonde (self-hosted) — the calligraphic accent face */
+@font-face {
+  font-family: 'Seramonde';
+  src: url('fonts/Seramonde.woff2') format('woff2'),
+       url('fonts/Seramonde.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
